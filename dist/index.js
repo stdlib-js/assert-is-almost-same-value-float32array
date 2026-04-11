@@ -1,5 +1,38 @@
-"use strict";var u=function(e,r){return function(){return r||e((r={exports:{}}).exports,r),r.exports}};var t=u(function(A,s){
-var a=require('@stdlib/assert-is-float32array/dist'),o=require('@stdlib/array-base-assert-has-almost-same-values/dist');function l(e,r,i){return a(e)&&a(r)&&o(e,r,i)}s.exports=l
-});var m=t();module.exports=m;
 /** @license Apache-2.0 */
-//# sourceMappingURL=index.js.map
+
+'use strict';
+
+/**
+* Test if two arguments are both Float32Arrays and contain respective elements which are approximately the same value within a specified number of ULPs (units in the last place).
+*
+* @module @stdlib/assert-is-almost-same-value-float32array
+*
+* @example
+* var Float32Array = require( '@stdlib/array-float32' );
+* var isAlmostSameValueFloat32Array = require( '@stdlib/assert-is-almost-same-value-float32array' );
+*
+* var x = new Float32Array( [ 1.0, 2.0, 3.0 ] );
+* var y = new Float32Array( [ 1.0, 2.0, 3.0 ] );
+*
+* var out = isAlmostSameValueFloat32Array( x, y, 1 );
+* // returns true
+*
+* @example
+* var Float32Array = require( '@stdlib/array-float32' );
+* var isAlmostSameValueFloat32Array = require( '@stdlib/assert-is-almost-same-value-float32array' );
+*
+* var x = new Float32Array( [ 1.0, 2.0, 3.0 ] );
+* var y = new Float32Array( [ 1.0, 2.0, 4.0 ] );
+*
+* var out = isAlmostSameValueFloat32Array( x, y, 1 );
+* // returns false
+*/
+
+// MODULES //
+
+var main = require( './main.js' );
+
+
+// EXPORTS //
+
+module.exports = main;
